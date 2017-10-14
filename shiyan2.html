@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>计算器</title>
+	<meta charset="utf-8"/>
+	<style type="text/css">
+ 		#result{
+ 			text-align: right;
+ 		}
+	</style>
+	<script type="text/javascript">
+		var str;
+		var result;
+		function showDate (num) {
+			str=document.getElementById("result"); 
+			str.value =str.value + num;			
+		}
+		function caculate () {
+			str = document.getElementById("result");
+			result = eval(str.value);
+			str.value= result;
+		}
+		function clearNum() {
+			str = document.getElementById("result");
+			str.value = '';
+		}
+	</script>
+</head>
+<body>
+	<table border="1px" cellpadding="6px" cellspacing="2px" align="center">
+		<tr>
+			<td colspan="3"><input type="text" id="result" style="width: 235px;height: 60px;"/></td>
+			<td><input type="button" name="C" value="C" id="C" onclick="clearNum()" style="width: 70px;height: 70px;"/></td>
+		</tr>
+		<tr>
+			<td><input type="button" name="1" value="1" id="1" onclick="showDate(1)" style="width: 70px;height: 70px;"/></td>
+			<td><input type="button" name="2" value="2" id="2" onclick="showDate(2)" style="width: 70px;height: 70px;"/></td>
+			<td><input type="button" name="3" value="3" id="3" onclick="showDate(3)" style="width: 70px;height: 70px;"/></td>
+			<td><input type="button" name="+" value="+" id="+" onclick="showDate('+')" style="width: 70px;height: 70px;"/></td>
+		</tr>
+		<tr>
+			<td><input type="button" name="4" value="4" id="4" onclick="showDate(4)" style="width: 70px;height: 70px;"/></td>
+			<td><input type="button" name="5" value="5" id="5" onclick="showDate(5)" style="width: 70px;height: 70px;"/></td>
+			<td><input type="button" name="6" value="6" id="6" onclick="showDate(6)" style="width: 70px;height: 70px;"/></td>
+			<td><input type="button" name="-" value="-" id="-" onclick="showDate('-')" style="width: 70px;height: 70px;"/></td>
+		</tr>
+		<tr>
+			<td><input type="button" name="7" value="7" id="7" onclick="showDate(7)" style="width: 70px;height: 70px;"/></td>
+			<td><input type="button" name="8" value="8" id="8" onclick="showDate(8)" style="width: 70px;height: 70px;"/></td>
+			<td><input type="button" name="9" value="9" id="9" onclick="showDate(9)" style="width: 70px;height: 70px;"/></td>
+			<td><input type="button" name="*" value="*" id="*" onclick="showDate('*')" style="width: 70px;height: 70px;"/></td>
+		</tr>
+		<tr>
+			<td><input type="button" name="0" value="0" id="0" onclick="showDate(0)" style="width: 70px;height: 70px;"/></td>
+			<td><input type="button" name="." value="." id="." onclick="showDate('.')" style="width: 70px;height: 70px;"/></td>
+			<td><input type="button" name="=" value="=" id="=" onclick="caculate()" style="width: 70px;height: 70px;"/></td>
+			<td><input type="button" name="/" value="/" id="/" onclick="showDate('/')" style="width: 70px;height: 70px;"/></td>
+		</tr>
+	</table>
+</body>
+</html>
