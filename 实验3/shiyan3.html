@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>实验3：商品评分</title>
+	<meta charset="utf-8"/>
+	<script src="demo.js"></script>
+	<style type="text/css">
+		div{
+			padding:2px;
+		}
+		div.one{
+			width:280px;
+			text-align:right;
+		}
+		
+	</style>
+</head>
+<body>
+	<div>
+		<img src="images/star0.png" onmousemove="starPic(0)" onmouseout="hide()" onclick="qd(0)" />
+		<img src="images/star0.png" onmousemove="starPic(1)" onmouseout="hide()" onclick="qd(1)"/>
+		<img src="images/star0.png" onmousemove="starPic(2)" onmouseout="hide()" onclick="qd(2)"/>
+		<img src="images/star0.png" onmousemove="starPic(3)" onmouseout="hide()" onclick="qd(3)"/>
+		<img src="images/star0.png" onmousemove="starPic(4)" onmouseout="hide()" onclick="qd(4)"/>
+	</div>
+	<div>
+		<textarea cols="33" rows="8" id="text" value=""></textarea>
+	</div>
+	<div class="one">
+		<select name="公开评论">
+			<option>公开评论</option>
+			<option>私密评论</option>
+		</select>
+	</div>
+</body>
+</html>
